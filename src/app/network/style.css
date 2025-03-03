@@ -1,0 +1,22 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.linkedin-icon-container {
+  position: absolute;
+  bottom: -10;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.linkedin-icon {
+  font-size: 2em;
+  color: #0077b5;
+}
+
+.image-container:hover .linkedin-icon-container {
+  opacity: 1;
+}

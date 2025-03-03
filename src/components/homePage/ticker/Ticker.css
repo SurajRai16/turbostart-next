@@ -1,0 +1,32 @@
+/* Ticker container styles */
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  /* border: 1px solid #ddd;   */
+}
+
+/* Ticker content styles */
+.ticker-content {
+  display: inline-block;
+  padding-right: 10px; /* Ensure content moves to the left infinitely */
+  animation: marquee 20s linear infinite;
+  /* animation: marquee 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; */
+}
+
+/* Individual ticker item styles */
+.ticker-content Link {
+  padding: 10px;
+  margin-right: 10px; /* Add spacing between items */
+  /* Background color for each item */
+  border-radius: 5px; /* Rounded corners for a cleaner look */
+}
+
+/* Animation keyframes for the ticker */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -24,9 +24,9 @@ const AboutTurbostart = () => {
           {/* Main Content */}
           <div className="flex flex-col lg:flex-row items-center rounded-xl border border-slate-500">
             {/* Left Column */}
-            <div className="lg:w-1/3 text-center lg:text-left sm:px-8 p-5 sm:p-0">
+            <div className="lg:w-1/3 text-center lg:text-left sm:px-8 p-5 sm:p-5">
               <h3 className="text-2xl font-normal mb-4">Who We Are</h3>
-              <div className="mb-6 text-[10px] text-[#BABABA] leading-relaxed">
+              <div className="mb-6 text-xs text-[#BABABA] leading-relaxed">
                 We’re here to support committed founders and bold ideas, driving
                 their growth through our network, expertise, and resources.
                 <br />
@@ -45,7 +45,7 @@ const AboutTurbostart = () => {
               <Image
                 src={"/images/home/map.svg"}
                 width={600}
-                height={450}
+                height={550}
                 className="w-full"
                 alt="About Turbostart"
               />
@@ -66,7 +66,7 @@ const AboutTurbostart = () => {
               </div>
 
               <div className="bg-[#282828] p-5 rounded-lg justify-center flex flex-col w-full py-4 sm:py-0">
-                <p className="text-gray-400 text-xs leading-loose">
+                <p className="text-[#b9b9b9] text-xs leading-relaxed">
                   <span className="text-white font-semibold">
                     A Trusted Network:
                   </span>{" "}
@@ -88,7 +88,7 @@ const AboutTurbostart = () => {
               </div>
 
               <div className="bg-[#282828] p-5 xl:px-7 rounded-lg justify-center flex flex-col w-full py-4 sm:py-0">
-                <p className="text-gray-400 text-xs leading-loose">
+                <p className="text-[#b9b9b9] text-xs leading-relaxed">
                   <span className="text-white font-semibold">
                     Centers of Excellence (CoEs):
                   </span>{" "}
@@ -109,7 +109,7 @@ const AboutTurbostart = () => {
                 </h2>
               </div>
 
-              <div className="text-[#b9b9b9] flex flex-wrap sm:flex-nowrap w-full lg:w-1/2 rounded-lg h-fit md:pl-16 text-sm">
+              <div className="text-[#b9b9b9] flex flex-wrap sm:flex-nowrap w-full lg:w-1/2 rounded-lg h-fit md:pl-16 text-xs leading-relaxed">
                 from early-stage ideas to Series A startups - because we believe
                 great ideas can come from anywhere. No matter the stage, we have
                 tailored programs and resources for every founder, helping them

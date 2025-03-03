@@ -8,6 +8,7 @@ import useMediaQuery from "@/utils/useMediaQuery";
 import "./style.css";
 import Image from "next/image";
 
+
 const Header = () => {
   // for mobile menu
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
@@ -65,21 +66,12 @@ const Header = () => {
             </div>
           ) : (
             <button
-              className="rounded-full bg-white p-1"
+              className="flex flex-col gap-1.5 p-2 "
               onClick={() => setIsMenuToggled(!isMenuToggled)}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 51 51"
-                fill="none"
-              >
-                <path
-                  d="M18.5 16.5C18.5 15.6716 19.1716 15 20 15L39.4999 15C40.3283 15 40.9999 15.6716 40.9999 16.5C40.9999 17.3284 40.3283 18 39.4999 18L20 18C19.1716 18 18.5 17.3283 18.5 16.5ZM39.4999 24L12.5 24C11.6716 24 11 24.6716 11 25.5C11 26.3284 11.6716 27 12.5 27L39.4999 27C40.3283 27 40.9999 26.3284 40.9999 25.5C40.9999 24.6716 40.3283 24 39.4999 24ZM39.4999 33L26 33C25.1716 33 24.5 33.6716 24.5 34.5C24.5 35.3283 25.1716 36 26 36L39.4999 36C40.3283 36 40.9999 35.3283 40.9999 34.5C40.9999 33.6716 40.3283 33 39.4999 33Z"
-                  fill="black"
-                />
-              </svg>
+                <span className="w-6 h-0.5 bg-white block"></span>
+  <span className="w-6 h-0.5 bg-white block"></span>
+  <span className="w-6 h-0.5 bg-white block"></span>
             </button>
           )}
         </div>
@@ -91,14 +83,14 @@ const Header = () => {
           >
             <div className={headerStyles.mobileHeader}>
               {/* CLOSE ICON */}
-              <div className="flex justify-end p-12">
+              <div className="flex justify-end p-12 relative">
                 <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="41"
                     height="40"
                     viewBox="0 0 41 40"
-                    fill="none"
+                    fill="none" className="w-16 absolute top-0 left-5"
                   >
                     <circle
                       cx="20.0531"
@@ -132,6 +124,7 @@ const Header = () => {
                         <stop offset="1" stop-color="#511C27" />
                       </linearGradient>
                     </defs>
+                    
                   </svg>
                 </button>
               </div>

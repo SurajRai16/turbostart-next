@@ -14,10 +14,14 @@ const categories = [
 
 export default function Scrollbar() {
   return (
-    <div className="bg-black text-white p-8 relative section-width">
+    <div className="bg-black text-white sm:p-8 relative section-width">
       {/* Background Line Image */}
-      <div className="absolute top-5 hidden md:block">
+      <div className="absolute top-5 hidden sm:block">
         <img src="/images/home/linebg.svg" alt="line" />
+      </div>
+
+      <div className="sm:hidden flex justify-center mb-10">
+      <img src="/images/home/seed-stage.png" alt="line" className="w-40"/>
       </div>
 
       {/* Horizontal Scrolling Categories */}

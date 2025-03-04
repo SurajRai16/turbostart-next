@@ -5,6 +5,8 @@ import AboutTurbostart from "@/components/homePage/AboutTurbostart"
 import Innovation from "@/components/homePage/Innovation"
 import TurbostartGlobal from "@/components/homePage/TurbostartGlobal"
 import KeyStakeholders from "@/components/homePage/KeyStakeholders"
+import MiniHero from "@/components/homePage/MiniHero"
+import SecondHero from "@/components/homePage/SecondHero"
 
 export default function Home() {
   const jsonLd = {
@@ -71,7 +73,9 @@ export default function Home() {
       <GlobalcohortButton />
       {/* <Ticker /> */}
       <Hero />
-      <AboutTurbostart/>
+      <MiniHero />
+<AboutTurbostart />
+
       <TurbostartGlobal/>
       <KeyStakeholders/>
       <Innovation/>

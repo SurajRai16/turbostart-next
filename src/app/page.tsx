@@ -1,12 +1,11 @@
-
 import GlobalcohortButton from "@/components/homePage/GlobalcohortButton";
 import Hero from "@/components/homePage/hero";
-import AboutTurbostart from "@/components/homePage/AboutTurbostart"
-import Innovation from "@/components/homePage/Innovation"
-import TurbostartGlobal from "@/components/homePage/TurbostartGlobal"
-import KeyStakeholders from "@/components/homePage/KeyStakeholders"
-import MiniHero from "@/components/homePage/MiniHero"
-import SecondHero from "@/components/homePage/SecondHero"
+import AboutTurbostart from "@/components/homePage/AboutTurbostart";
+import Innovation from "@/components/homePage/Innovation";
+import TurbostartGlobal from "@/components/homePage/TurbostartGlobal";
+import KeyStakeholders from "@/components/homePage/KeyStakeholders";
+import MiniHero from "@/components/homePage/MiniHero";
+import SecondHero from "@/components/homePage/SecondHero";
 
 export default function Home() {
   const jsonLd = {
@@ -24,19 +23,12 @@ export default function Home() {
         availableLanguage: "en",
       },
     ],
-    sameAs: [
-      "https://www.linkedin.com/company/lets-turbostart/",
-      "https://www.youtube.com/@turbostart",
-      "https://www.instagram.com/letsturbostart/",
-    ],
+    sameAs: ["https://www.linkedin.com/company/lets-turbostart/", "https://www.youtube.com/@turbostart", "https://www.instagram.com/letsturbostart/"],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* <svg
         id="svg"
         viewBox="0 0 20 2808"
@@ -73,12 +65,12 @@ export default function Home() {
       <GlobalcohortButton />
       {/* <Ticker /> */}
       <Hero />
-      <MiniHero />
-<AboutTurbostart />
+      <SecondHero />
+      <AboutTurbostart />
 
-      <TurbostartGlobal/>
-      <KeyStakeholders/>
-      <Innovation/>
+      <TurbostartGlobal />
+      <KeyStakeholders />
+      <Innovation />
       <div className="relative section-width ">
         {/* <div className="absolute md:left-4 h-full z-[-10] lg:block hidden">
           <img src="/images/line.png" className="h-[480rem]" alt="line" />

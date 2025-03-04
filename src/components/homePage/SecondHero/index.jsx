@@ -10,12 +10,14 @@ import Company from "./Company";
 const Hero = () => {
   return (
     <>
-      <div className="hero-container sm:block hidden">
-        <div className="hero-box">
+      <div className="hero-container sm:block hidden ">
+        <div className="hero-box ">
           <div className="box-1">
             <div className="box-item box-item-1">
               <Image src={"/images/home/hero/hero-bg1.png"} className="bg-img" width={300} height={200} alt="scout logo" />
-              <h3>Our Portfolio</h3>
+              <p className="mb-3">Our Portfolio</p>
+              <BsArrowUpRightCircle className="top-4 w-5 h-5 absolute left-[90%]" />
+
               <CompanyLogos />
             </div>
             <div className="box-item box-item-2">
@@ -24,7 +26,8 @@ const Hero = () => {
                 {/* You can add more sources for different formats if needed */}
               </video>
               <div className="box-footer">
-                <h4 className="mt-auto">Team</h4>
+                <p className="mt-auto">Team</p>
+                <BsArrowUpRightCircle className="top-[20%] w-5 h-5 absolute left-[90%]" />
               </div>
             </div>
           </div>
@@ -58,7 +61,8 @@ const Hero = () => {
                 <div className="box-item box-item-4">
                   <Image src={"/images/home/logo/scout-logo.svg"} className="img" width={300} height={200} alt="scout logo" />
                   <div className="box-footer">
-                    <h4 className="mt-auto">Campus Innovation</h4>
+                    <p className="mt-auto">Campus Innovation</p>
+                    <BsArrowUpRightCircle className="top-[20%] w-5 h-5 absolute left-[90%]" />
                   </div>
                 </div>
               </div>
@@ -67,13 +71,17 @@ const Hero = () => {
                   <h5 className="desc">Democratizing angel investing with curated opportunities</h5>
                   <Image src={"/images/home/hero/ts-bridge.png"} className="img" width={300} height={200} alt="scout logo" />
                   <div className="box-footer">
-                    <h4 className="mt-auto">TS Bridge</h4>
+                    <p className="mt-auto">TS Bridge</p>
+                    <BsArrowUpRightCircle className="top-[20%] w-5 h-5 absolute left-[90%]" />
+
                   </div>
                 </div>
                 <div className="box-item box-item-6 ">
                   <Image src={"/images/home/hero/coe-logo.png"} className="img" width={300} height={200} alt="scout logo" />
                   <div className="box-footer">
-                    <h4 className="mt-auto">Centers of Excellence</h4>
+                    <p className="mt-auto">Centers of Excellence</p>
+                    <BsArrowUpRightCircle className="top-[20%] w-5 h-5 absolute left-[90%]" />
+
                   </div>
                 </div>
               </div>
@@ -84,7 +92,9 @@ const Hero = () => {
                 {/* You can add more sources for different formats if needed */}
               </video>
               <div className="box-footer">
-                <h4 className="mt-auto">Team</h4>
+                <p className="mt-auto">Stakeholder</p>
+                <BsArrowUpRightCircle className="top-[20%] w-5 h-5 absolute left-[95%]" />
+
               </div>
             </div>
           </div>

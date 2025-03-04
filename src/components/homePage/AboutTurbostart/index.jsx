@@ -5,7 +5,7 @@ import Scrollbar from "@/components/homePage/Scrollbar";
 const AboutTurbostart = () => {
   return (
     <>
-      <section className="section-width text-white py-10 ">
+      <section className="section-width text-white py-10 sm:mt-[800px] lg:mt-0">
         {/* Circle Decoration */}
         <div className="flex mx-auto w-fit mb-2">
           <div className="bg-[#f16365] circle"></div>

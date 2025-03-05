@@ -261,6 +261,10 @@ svg .line {
 
 @layer utilities {
   .image {
-    background-image: url('/images/scout/mask.png');
+    background-image: url("/images/scout/mask.png");
   }
+}
+.slow-scroll {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }

@@ -7,24 +7,33 @@ import Innovation from "@/components/homePage/Innovation";
 import TurbostartGlobal from "@/components/homePage/TurbostartGlobal";
 import KeyStakeholders from "@/components/homePage/KeyStakeholders";
 import SecondHero from "@/components/homePage/SecondHero";
-// import { motion } from "framer-motion";
 
 export default function Home() {
-  // const [isDragged, setIsDragged] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
+  // const [hasScrolled, setHasScrolled] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10 && !hasScrolled) {
-        setHasScrolled(true);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 10 && !hasScrolled) {
+  //       setHasScrolled(true);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [hasScrolled]); // Dependency ensures `hasScrolled` updates only once
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [hasScrolled]); // Dependency ensures `hasScrolled` updates only once
+
+  const handleScroll = (event: any) => {
+    const scrollY = event.detail.scrollTop;
+
+    if (scrollY > 10) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
 
   return (
     <>
@@ -53,31 +62,20 @@ export default function Home() {
 
       <GlobalcohortButton />
 
-      {/* <motion.div
-        className="absolute top-0 left-0 z-50 w-full h-screen bg-white"
-        drag="y"
-        dragConstraints={{ top: 0, bottom: 200 }}
-        onDragEnd={(_, info) => {
-          if (info.offset.y < -100) {
-            setIsDragged(true);
-          }
-        }}
-        animate={{ y: isDragged ? "-100%" : "0%" }}
-        transition={{ type: "spring", stiffness: 80 }}
-      >
-        <Hero />
-      </motion.div>
-
-      <div className={`transition-all duration-500 ${isDragged ? "mt-[100px]" : "mt-[100px]"}`}>
-        <SecondHero />
-      </div> */}
-      <div className={`${hasScrolled && "translate-y-[-100%]"} transition-all duration-1000 absolute top-0 left-0 z-50 w-full h-screen slow-scroll`}>
+      <div className={`${isScroll && "translate-y-[-100%]"} transition-all duration-1000 absolute top-0 left-0 z-50 w-full h-screen slow-scroll overflow-y-scroll`} onScroll={handleScroll}>
         <Hero />
       </div>
 
       <div id="second-hero" className="mt-[100px] transition-all duration-500">
         <SecondHero />
       </div>
+      {/* <div className={`${hasScrolled && "translate-y-[-100%]"} transition-all duration-1000 absolute top-0 left-0 z-50 w-full h-screen slow-scroll `} scrollEvents={true} onScroll={handleScroll}>
+        <Hero />
+      </div>
+
+      <div id="second-hero" className="mt-[100px] transition-all duration-500">
+        <SecondHero />
+      </div> */}
 
       <AboutTurbostart />
       <TurbostartGlobal />

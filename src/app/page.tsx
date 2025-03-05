@@ -71,7 +71,7 @@ export default function Home() {
       <div className={`transition-all duration-500 ${isDragged ? "mt-[100px]" : "mt-[100px]"}`}>
         <SecondHero />
       </div> */}
-      <div className={`${hasScrolled && "translate-y-[-100%]"} transition-all duration-1000 absolute top-0 left-0 z-50 w-full h-screen slow-scroll`}>
+      <div className={`${hasScrolled && "translate-y-[-100%]"} transition-all duration-[4000ms]   absolute top-0 left-0 z-50 w-full h-screen slow-scroll`}>
         <Hero />
       </div>
 
